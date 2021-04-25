@@ -1,7 +1,10 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 
 const port = process.env.port || 8000
+
+app.use(cors)
 
 app.get('/api/grupo', (req, res) => {
     res.json({
